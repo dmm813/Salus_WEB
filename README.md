@@ -1,6 +1,6 @@
 # Salus - Sistema de Ordem de Serviço
 
-Salus é um sistema de gestão de ordens de serviço desenvolvido em React. O projeto é um refactor de uma aplicação originalmente feita em C#.
+Salus é um sistema de gestão de ordens de serviço desenvolvido em React.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -48,7 +48,7 @@ Salus é um sistema de gestão de ordens de serviço desenvolvido em React. O pr
 3. **Configure as variáveis de ambiente:**
    Crie um arquivo `.env` na raiz do projeto e adicione as variáveis necessárias:
    ```sh
-   VITE_API_BASE_URL=http://localhost:3000/api
+   API_BASE_URL=http://localhost:3000
    ```
 
 4. **Execute o projeto:**
