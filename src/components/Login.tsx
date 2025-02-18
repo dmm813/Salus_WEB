@@ -1,5 +1,5 @@
 import S from './Login.module.scss'
-import config from '../config'
+import 'dotenv/config'
 import { useState } from 'react';
 import { IoLogoGoogleplus } from "react-icons/io";
 import { LiaFacebookF } from "react-icons/lia";
@@ -33,7 +33,7 @@ export default function Login() {
       }
 
       // Faz a requisição para o servidor para validar o login
-      const response = await fetch(`${config.apiUrl}/api/Auth/login`, {
+      const response = await fetch(`${process.env.API_BASE_URL}/api/Auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: emailSignIn, senha: passwordSignIn }),
