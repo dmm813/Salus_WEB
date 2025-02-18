@@ -1,0 +1,9 @@
+[data-theme="dark"] {
+  --bg-primary: #0a0a0a;
+  --primary-text-color: #fff;
+  --bg-secondary: var(--black-800);
+  --toggle-fg: #00a6ff;
+  --toggle-bg: #283452;
+
+  background-color: var(--bg-secondary);
+}

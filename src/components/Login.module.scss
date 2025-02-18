@@ -1,0 +1,222 @@
+:root {
+  --cubo: 50px;
+  --text-color: #111;
+  --purple: #411978;
+  --linear-purple:  linear-gradient(to right, #473488, #411978);
+  --cyan: #c2c2c2;
+  --fontfamily: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --radiusContainer: 40px;
+  --width-btn: 200px;
+  --height-btn: 50px;
+}
+.container {
+  width: 800px;
+  height: 480px;
+  display: flex;
+  border: 1px solid var(--cyan);
+  border-radius: var(--radiusContainer);
+  background-color: white;
+  position: relative;
+}
+.center {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.form {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 50px;
+  position: relative;
+}
+.title {
+  font-family: var(--fontfamily);
+  font-size: 2rem;
+}
+.text {
+  font-family: var(--fontfamily);
+  text-decoration: none;
+  color: var(---text-color);
+}
+.socialIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 10px;
+}
+.icon {
+  font-size: 1.5rem;
+  width: var(--cubo);
+  height: var(--cubo);
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input {
+  width: 300px;
+  height: 40px;
+  background-color: #e9e9e9;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  font-family: var(--fontfamily);
+  font-size: 1.2rem;
+  color: var(---text-color);
+  &::placeholder {
+    color: var(---text-color);
+  }
+}
+.forgot {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.accountBtn {
+  width: var(--width-btn);
+  height: var(--height-btn);
+  border-radius: 10px;
+  background-color: var(--purple);
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  align-self: center;
+  font-weight: bold;
+}
+.signIn, .signUp {
+  position: absolute;
+  overflow: hidden;
+  width: 400px;
+}
+
+.signUp {
+  position: absolute;
+  overflow: hidden;
+  width: 400px;
+  right: 0;
+}
+
+// toggle container
+.toggleContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0px;
+  right: 0px;
+  width: 400px;
+  height: 100%;
+  gap: 10px;
+  background-image: var(--linear-purple);
+  border-radius: 100px var(--radiusContainer) var(--radiusContainer) 100px;
+  transition: all .5s ease-in;
+
+  .toggle {
+    position: relative;
+    width: 100%;
+    .toggleLeft {
+      position: absolute;
+      width: 85%;
+      opacity: 0;
+      text-align: center;
+      display: flex;
+      z-index: -1;
+      margin-right: 100%;
+    }
+    .toggleRight {
+      width: 85%;
+    }
+  }
+  
+  .toggleBtn {
+    width: var(--width-btn);
+    height: var(--height-btn);
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.signUpToggleContainer {
+  .toggleContainer {
+    right: 50% !important;
+    border-radius: var(--radiusContainer) 100px 100px var(--radiusContainer);
+  }
+  .signIn {
+    border-radius: var(--radiusContainer) 100px 100px var(--radiusContainer);
+    .form {
+      transform: translateX(400px);
+      transition: transform 0.5s ease-in;
+    }
+  }
+  .signUp {
+    .form {
+      transform: translateX(0px);
+      transition: transform .5s ease-in;
+    }
+  }
+  .toggle {
+    .toggleRight {
+      opacity: 0;
+      transform: translateX(800px);
+      transition: all .5s ease-in;
+    }
+    .toggleLeft {
+      opacity: 1;
+      z-index: 1;
+      transform: translateX(200px);
+      transition: all .5s ease-in;
+    }
+  }
+}
+
+.signInToggleContainer {
+  .toggleContainer {
+    right: 0% !important;
+    border-radius: 100px var(--radiusContainer) var(--radiusContainer) 100px;
+  }
+  .signIn {
+    .form {
+      transform: translateX(0px);
+      transition: transform .5s ease-in;
+    }
+  }
+  .signUp {
+    border-radius: 100px var(--radiusContainer) var(--radiusContainer) 100px;
+    .form {
+      transform: translateX(-400px);
+      transition: transform .5s ease-in;
+    }
+  }
+  .toggle {
+    .toggleRight {
+      opacity: 1;
+      z-index: 1;
+      transform: translateX(0px);
+      transition: all .5s ease-in;
+    }
+    .toggleLeft {
+      opacity: 0;
+      transform: translateX(-800px);
+      transition: all .5s ease-in;
+    }
+  }
+}
+
+.error {
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: calc(100% - 100px);
+  color: red;
+}
