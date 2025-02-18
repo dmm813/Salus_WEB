@@ -1,50 +1,81 @@
-# React + TypeScript + Vite
+# Salus - Sistema de Ordem de Serviço
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Salus é um sistema de gestão de ordens de serviço desenvolvido em React. O projeto é um refactor de uma aplicação originalmente feita em C#.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: Biblioteca para construção da interface
+- **TypeScript**: Tipagem estática para JavaScript
+- **Tailwind CSS**: Estilização baseada em classes utilitárias
+- **React Hook Form**: Gerenciamento de formulários
+- **Zod**: Validação de dados
+- **React Query**: Gerenciamento de estado assíncrono
+- **Axios**: Consumo de API
+- **React Router**: Navegação entre páginas
 
-## Expanding the ESLint configuration
+## 📂 Estrutura do Projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+📂 salus
+ ├── 📁 src
+ │   ├── 📁 components  # Componentes reutilizáveis
+ │   ├── 📁 pages       # Páginas da aplicação
+ │   ├── 📁 hooks       # Hooks personalizados
+ │   ├── 📁 services    # Comunicação com a API
+ │   ├── 📁 utils       # Funções auxiliares
+ │   ├── App.tsx       # Componente principal
+ │   ├── main.tsx      # Ponto de entrada
+ ├── package.json      # Dependências e scripts
+ ├── tailwind.config.js # Configuração do Tailwind
+ ├── tsconfig.json     # Configuração do TypeScript
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🛠️ Como Configurar e Executar
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. **Clone o repositório:**
+   ```sh
+   git clone https://github.com/seu-usuario/salus.git
+   cd salus
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. **Instale as dependências:**
+   ```sh
+   npm install
+   # ou
+   yarn install
+   ```
+
+3. **Configure as variáveis de ambiente:**
+   Crie um arquivo `.env` na raiz do projeto e adicione as variáveis necessárias:
+   ```sh
+   VITE_API_BASE_URL=http://localhost:3000/api
+   ```
+
+4. **Execute o projeto:**
+   ```sh
+   npm run dev
+   # ou
+   yarn dev
+   ```
+
+5. **Acesse no navegador:**
+   ```
+   http://localhost:5173
+   ```
+
+## 📌 Funcionalidades Principais
+
+- 📋 Cadastro e gerenciamento de ordens de serviço
+- 🔍 Pesquisa e filtros avançados
+- 📅 Agendamento de serviços
+- 📊 Relatórios e dashboards
+- 👤 Controle de usuários e permissões
+
+## 📝 Licença
+
+Este projeto é licenciado sob a licença MIT. Sinta-se livre para contribuir! ✨
+
+---
+Feito com ❤️ por:
+ [Danilo Oliveira](https://github.com/DaniloThiago)
+ [Davidson Marques](https://github.com/dmm813)
