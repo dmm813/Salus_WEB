@@ -46,7 +46,7 @@ Salus é um sistema de gestão de ordens de serviço desenvolvido em React.
    ```
 
 3. **Configure as variáveis de ambiente:**
-   Crie um arquivo `.env` na raiz do projeto e adicione as variáveis necessárias:
+   No arquivo `config.ts` na raiz do projeto e atualize as variáveis necessárias:
    ```sh
    API_BASE_URL=http://localhost:3000
    ```
