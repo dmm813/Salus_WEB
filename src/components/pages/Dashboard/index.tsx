@@ -9,8 +9,8 @@ import {
   IoLockClosedOutline,
   IoLogOutOutline
 } from "react-icons/io5";
-import { Toggle } from './Toggle';
-import useTheme from '../Provider/useTheme';
+import { Toggle } from '../../layout/Toogle';
+import useTheme from '../../../Provider/useTheme';
 
 export default function Navigation() {
   const { isDark, toggleTheme } = useTheme();

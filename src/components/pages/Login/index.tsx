@@ -2,7 +2,7 @@ import S from './Login.module.scss'
 import { useState } from 'react';
 import { IoLogoGoogleplus } from "react-icons/io";
 import { LiaFacebookF } from "react-icons/lia";
-import config from '../config';
+import config from '../../../config';
 
 export default function Login() {
   const [status, setStatus] = useState('signIn');
