@@ -27,4 +27,6 @@ dist-ssr
 
 .vs/*
 .node_modules/*
-obj/*
+.obj/*
+.env
+.esproj
