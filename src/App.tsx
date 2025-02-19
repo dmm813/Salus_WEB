@@ -1,6 +1,6 @@
 import './App.css'
 import Calendar from './components/layout/Calendar';
-import Navigation from './components/pages/Dashboard';
+import Navigation from './pages/Dashboard';
 import useTheme from './Provider/useTheme';
 
 export const App = () => {
