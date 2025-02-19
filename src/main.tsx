@@ -5,7 +5,7 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { App } from './App'
 import { ThemeProvider } from './Provider/ThemeContext'
-import Login from './components/Login'
+import Login from './pages/Login'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
